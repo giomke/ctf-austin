@@ -26,17 +26,6 @@ function createChallenges () {
   const addHint = hint => config.get('application.showChallengeHints') ? hint : null
 
   models.Challenge.create({
-    name: 'Score Board',
-    category: 'Information Leakage',
-    description: 'Find the carefully hidden \'Score Board\' page.',
-    difficulty: 1,
-    hint: addHint('Try to find a reference or clue behind the scenes. Or simply guess what URL the Score Board might have.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/score-board.html#find-the-carefully-hidden-score-board-page'),
-    solved: false
-  }).success(challenge => {
-    challenges.scoreBoardChallenge = challenge
-  })
-  models.Challenge.create({
     name: 'Error Handling',
     category: 'Information Leakage',
     description: 'Provoke an error that is not very gracefully handled.',
