@@ -39,7 +39,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Login Admin',
     category: 'SQL Injection',
-    description: 'Log in with the administrator\'s user account.',
+    description: 'დალოგინდი ადმინის ანგარიშით',
     difficulty: 2,
     hint: addHint('Try different SQL Injection attack patterns depending whether you know the admin\'s email address or not.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sqli.html#log-in-with-the-administrators-user-account'),
@@ -50,7 +50,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Login Jim',
     category: 'SQL Injection',
-    description: 'Log in with Jim\'s user account.',
+    description: 'დალოგინდი Jim -ის ანგარიშზე.',
     difficulty: 3,
     hint: addHint('Try cracking Jim\'s password hash if you harvested it already. Alternatively, if you know Jim\'s email address, try SQL Injection.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sqli.html#log-in-with-jims-user-account'),
@@ -61,7 +61,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Login Bender',
     category: 'SQL Injection',
-    description: 'Log in with Bender\'s user account.',
+    description: 'დალოგინდი Bender -ის ანგარიშზე.',
     difficulty: 3,
     hint: addHint('If you know Bender\'s email address, try SQL Injection. Bender\'s password hash might not help you very much.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sqli.html#log-in-with-benders-user-account'),
@@ -70,9 +70,9 @@ function createChallenges () {
     challenges.loginBenderChallenge = challenge
   })
   models.Challenge.create({
-    name: 'XSS Tier 1',
+    name: 'XSS1',
     category: 'XSS',
-    description: 'Perform a <i>reflected</i> XSS attack with <code>&lt;script&gt;alert("XSS1")&lt;/script&gt;</code>.',
+    description: 'განახორციელე <i>reflected</i> XSS შეტევა შემდეგი კოდით <code>&lt;script&gt;alert("XSS1")&lt;/script&gt;</code>.',
     difficulty: 1,
     hint: addHint('Look for an input field where its content appears in the response HTML when its form is submitted.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/xss.html#perform-a-reflected-xss-attack'),
@@ -81,9 +81,9 @@ function createChallenges () {
     challenges.localXssChallenge = challenge
   })
   models.Challenge.create({
-    name: 'XSS Tier 2',
+    name: 'XSS2',
     category: 'XSS',
-    description: 'Perform a <i>persisted</i> XSS attack with <code>&lt;script&gt;alert("XSS2")&lt;/script&gt;</code> bypassing a <i>client-side</i> security mechanism.',
+    description: 'განახორციელე <i>persisted</i> XSS შეტევა შემდეგი კოდით <code>&lt;script&gt;alert("XSS2")&lt;/script&gt;</code> გვერდი აუარე <i>client-side</i> უსაფრთხოების მექანიზმს.',
     difficulty: 3,
     hint: addHint('Only some input fields validate their input. Even less of these are persisted in a way where their content is shown on another screen.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/xss.html#perform-a-persisted-xss-attack-bypassing-a-client-side-security-mechanism'),
@@ -92,9 +92,9 @@ function createChallenges () {
     challenges.persistedXssChallengeUser = challenge
   })
   models.Challenge.create({
-    name: 'XSS Tier 4',
+    name: 'XSS4',
     category: 'XSS',
-    description: 'Perform a <i>persisted</i> XSS attack with <code>&lt;script&gt;alert("XSS4")&lt;/script&gt;</code> bypassing a <i>server-side</i> security mechanism.',
+    description: 'განახორციელე <i>persisted</i> XSS შეტევა შემდეგი კოდით <code>&lt;script&gt;alert("XSS4")&lt;/script&gt;</code> გვერდი აუარე <i>server-side</i> უსაფრთხოების მექანიზმს.',
     difficulty: 4,
     hint: addHint('The "Comment" field in the "Contact Us" screen is where you want to put your focus on.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/xss.html#perform-a-persisted-xss-attack-bypassing-a-server-side-security-mechanism'),
@@ -103,9 +103,9 @@ function createChallenges () {
     challenges.persistedXssChallengeFeedback = challenge
   })
   models.Challenge.create({
-    name: 'XSS Tier 3',
+    name: 'XSS3',
     category: 'XSS',
-    description: 'Perform a <i>persisted</i> XSS attack with <code>&lt;script&gt;alert("XSS3")&lt;/script&gt;</code> without using the frontend application at all.',
+    description: 'განახორციელე <i>persisted</i> XSS შეტევა შემდეგი კოდით <code>&lt;script&gt;alert("XSS3")&lt;/script&gt;</code> frontend აპლიკაციის გამოყენების გარეშ.',
     difficulty: 3,
     hint: addHint('You need to work with the server-side API directly. Try different HTTP verbs on different entities exposed through the API.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/xss.html#perform-a-persisted-xss-attack-without-using-the-frontend-application-at-all'),
@@ -116,7 +116,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'User Credentials',
     category: 'SQL Injection',
-    description: 'Retrieve a list of all user credentials via SQL Injection',
+    description: 'SQL Injection -იით ნახე მომხმარებლების ცხრილი',
     difficulty: 3,
     hint: addHint('Craft a UNION SELECT attack string against a page where you can influence the data being displayed.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sqli.html#retrieve-a-list-of-all-user-credentials-via-sql-injection'),
@@ -127,7 +127,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Password Strength',
     category: 'Weak Security Mechanisms',
-    description: 'Log in with the administrator\'s user credentials without previously changing them or applying SQL Injection.',
+    description: 'დალოგინდი administrator -ის პაროლით.',
     difficulty: 2,
     hint: addHint('This one should be equally easy to a) brute force, b) crack the password hash or c) simply guess.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#log-in-with-the-administrators-user-credentials-without-previously-changing-them-or-applying-sql-injection'),
@@ -136,9 +136,9 @@ function createChallenges () {
     challenges.weakPasswordChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Five-Star Feedback',
+    name: 'მომხმარებელთა გამოხმაურება (Feedback)',
     category: 'Privilege Escalation',
-    description: 'Get rid of all 5-star customer feedback.',
+    description: 'ადმინის პანელიდან წაშალე შველა ხუთ ვარსკვლავიანი გამოხმაურება(Feedback)',
     difficulty: 1,
     hint: addHint('Once you found admin section of the application, this challenge is almost trivial.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/privilege-escalation.html#get-rid-of-all-5-star-customer-feedback'),
@@ -147,9 +147,9 @@ function createChallenges () {
     challenges.feedbackChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Forged Feedback',
+    name: 'ყალბი გამოხმაურება (Feedback)',
     category: 'Privilege Escalation',
-    description: 'Post some feedback in another users name.',
+    description: 'სხვა მომხმარებლის სახელით გააკეთე გამოხმაურება',
     difficulty: 3,
     hint: addHint('You can solve this by tampering with the user interface or by intercepting the communication with the RESTful backend.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/privilege-escalation.html#post-some-feedback-in-another-users-name'),
@@ -158,20 +158,9 @@ function createChallenges () {
     challenges.forgedFeedbackChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Redirects',
-    category: 'Weak Security Mechanisms',
-    description: 'Wherever you go, there you are.',
-    difficulty: 4,
-    hint: addHint('You have to find a way to beat the whitelist of allowed redirect URLs.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#wherever-you-go-there-you-are'),
-    solved: false
-  }).success(challenge => {
-    challenges.redirectChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'Basket Access',
+    name: 'კალათზე წვდომა',
     category: 'Privilege Escalation',
-    description: 'Access someone else\'s basket.',
+    description: 'მოახდინე სხვის კალათზე წვდომა',
     difficulty: 2,
     hint: addHint('Have an eye on the HTTP traffic while shopping. Alternatively try to find s client-side association of users to their basket.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/privilege-escalation.html#access-someone-elses-basket'),
@@ -180,9 +169,9 @@ function createChallenges () {
     challenges.basketChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Payback Time',
+    name: 'უფასოდ შეძენა',
     category: 'Validation Flaws',
-    description: 'Place an order that makes you rich.',
+    description: 'შეისყიდე პროდუქტი ისე რომ თანხა არ გადაიხადო.',
     difficulty: 3,
     hint: addHint('You literally need to make the shop owe you any amount of money.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/validation.html#place-an-order-that-makes-you-rich'),
@@ -191,9 +180,9 @@ function createChallenges () {
     challenges.negativeOrderChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Confidential Document',
+    name: 'კონფიდენციალური დოკუმენტები',
     category: 'Forgotten Content',
-    description: 'Access a confidential document.',
+    description: 'განახორციელე წვდომა კონფიდენციალურ დოკუმენტებზე.',
     difficulty: 1,
     hint: addHint('Analyze and tamper with links in the application that deliver a file directly.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#access-a-confidential-document'),
@@ -202,9 +191,9 @@ function createChallenges () {
     challenges.directoryListingChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Forgotten Developer Backup',
+    name: 'დეველოპერის Backup ფაილი',
     category: 'Forgotten Content',
-    description: 'Access a developer\'s forgotten backup file.',
+    description: 'განახორციელე წვდომა დეველოპერის backup ფაილზე.',
     difficulty: 3,
     hint: addHint('You need to trick a security mechanism into thinking that the file you want has a valid file type.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#access-a-developers-forgotten-backup-file'),
@@ -213,9 +202,9 @@ function createChallenges () {
     challenges.forgottenDevBackupChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Forgotten Sales Backup',
+    name: 'გაყიდვების ფაილი',
     category: 'Forgotten Content',
-    description: 'Access a salesman\'s forgotten backup file.',
+    description: 'განახორციელე გახიდვების ფაილზე წვდომა.',
     difficulty: 2,
     hint: addHint('You need to trick a security mechanism into thinking that the file you want has a valid file type.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#access-a-salesmans-forgotten-backup-file'),
@@ -224,9 +213,9 @@ function createChallenges () {
     challenges.forgottenBackupChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Admin Section',
+    name: 'Admin -ის განყოფილება',
     category: 'Privilege Escalation',
-    description: 'Access the administration section of the store.',
+    description: 'განახორციელე ადმინის პანელზე წვდომა.',
     difficulty: 1,
     hint: addHint('It is just slightly harder to find than the score board link.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/privilege-escalation.html#access-the-administration-section-of-the-store'),
@@ -237,7 +226,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'CSRF',
     category: 'CSRF',
-    description: 'Change Bender\'s password into <i>slurmCl4ssic</i> without using SQL Injection.',
+    description: 'შეცვალე Bender-ის პაროლი <i>slurmCl4ssic</i> - ად (SQL Injection გამოყენების გარეშე).',
     difficulty: 4,
     hint: addHint('The fact that this challenge is in the CSRF category is already a huge hint.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/csrf.html#change-benders-password-into-slurmcl4ssic-without-using-sql-injection'),
@@ -248,7 +237,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Product Tampering',
     category: 'Privilege Escalation',
-    description: 'Change the <code>href</code> of the link within the <a href="/#/search?q=ZAP">ZAP product</a> description into <i>https://mozilla.com</i>.',
+    description: 'შეცვალე <code>href</code> <a href="/#/search?q=ZAP">ZAP product</a> კოდი <i>https://mozilla.com</i> -ად.',
     difficulty: 3,
     hint: addHint('Look for one of the following: a) broken admin functionality, b) holes in RESTful API or c) possibility for SQL Injection.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/privilege-escalation.html#change-the-href-of-the-link-within-the-o-saft-product-description'),
@@ -259,7 +248,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Vulnerable Library',
     category: 'Vulnerable Component',
-    description: '<a href="/#/contact">Inform the shop</a> about a vulnerable library it is using. (Mention the exact library name and version in your comment)',
+    description: '<a href="/#/contact">შეატყობინე მაღაზიას</a> ბამოყენებული დაუცველი ბიბლიოთეკის შესახებ. (სახელი და ვერსია)',
     difficulty: 3,
     hint: addHint('Report one of two possible answers via the "Contact Us" form. Do not forget to submit the library\'s version as well.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/vulnerable-components.html#inform-the-shop-about-a-vulnerable-library-it-is-using'),
@@ -268,9 +257,9 @@ function createChallenges () {
     challenges.knownVulnerableComponentChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Weird Crypto',
+    name: 'სუსტი კრიფტოგრაფია',
     category: 'Cryptographic Issues',
-    description: '<a href="/#/contact">Inform the shop</a> about an algorithm or library it should definitely not use the way it does.',
+    description: '<a href="/#/contact">შეატყობინე მაღაზიას</a> გამოყენებული სუსტი კრიფტოგრაფიის ალგორითმის შესახებ ან ბიბლიოთეკის(მხოლოდ სახელი მიუთითე)',
     difficulty: 2,
     hint: addHint('Report one of four possible answers via the "Contact Us" form.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/crypto.html#inform-the-shop-about-an-algorithm-or-library-it-should-definitely-not-use-the-way-it-does'),
@@ -279,9 +268,9 @@ function createChallenges () {
     challenges.weirdCryptoChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Easter Egg Tier 1',
+    name: 'Easter Egg 1',
     category: 'Forgotten Content',
-    description: 'Find the hidden <a href="http://en.wikipedia.org/wiki/Easter_egg_(media)" target="_blank">easter egg</a>.',
+    description: 'იპოვე eastere.gg ფაილი</a>.',
     difficulty: 3,
     hint: addHint('If you solved one of the three file access challenges, you already know where to find the easter egg.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#find-the-hidden-easter-egg'),
@@ -290,9 +279,9 @@ function createChallenges () {
     challenges.easterEggLevelOneChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Easter Egg Tier 2',
+    name: 'Easter Egg 2',
     category: 'Cryptographic Issues',
-    description: 'Apply some advanced cryptanalysis to find <i>the real</i> easter egg.',
+    description: 'გამოიკვლიე eastere.gg ფაილი',
     difficulty: 4,
     hint: addHint('You might have to peel through several layers of tough-as-nails encryption for this challenge.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/crypto.html#apply-some-advanced-cryptanalysis-to-find-the-real-easter-egg'),
@@ -301,20 +290,9 @@ function createChallenges () {
     challenges.easterEggLevelTwoChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Forged Coupon',
-    category: 'Cryptographic Issues',
-    description: 'Forge a coupon code that gives you a discount of at least 80%.',
-    difficulty: 5,
-    hint: addHint('Try either a) a knowledgable brute force attack or b) reverse engineering.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/crypto.html#forge-a-coupon-code-that-gives-you-a-discount-of-at-least-80'),
-    solved: false
-  }).success(challenge => {
-    challenges.forgedCouponChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'Eye Candy',
+    name: 'თემის შეცვლა',
     category: 'Forgotten Content',
-    description: 'Travel back in time to the golden era of <img src="/css/geo-bootstrap/img/hot.gif"> web design.',
+    description: 'შეცვალე თემა <img src="/css/geo-bootstrap/img/hot.gif"> ძველ სტილში.',
     difficulty: 3,
     hint: addHint('The mentioned golden era lasted from 1994 to 2009.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#travel-back-in-time-to-the-golden-era-of-web-design'),
@@ -323,9 +301,9 @@ function createChallenges () {
     challenges.geocitiesThemeChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Christmas Special',
+    name: 'სიაში არმქონე პროდუქტი',
     category: 'SQL Injection',
-    description: 'Order the Christmas special offer of 2014.',
+    description: 'იყიდე Christmas special offer of 2014.',
     difficulty: 2,
     hint: addHint('Find out how the application handles unavailable products.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sqli.html#order-the-christmas-special-offer-of-2014'),
@@ -356,20 +334,9 @@ function createChallenges () {
     challenges.uploadTypeChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Extra Language',
-    category: 'Forgotten Content',
-    description: 'Retrieve the language file that never made it into production.',
-    difficulty: 4,
-    hint: addHint('Brute force is not the only option for this challenge, but a perfectly viable one.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#retrieve-the-language-file-that-never-made-it-into-production'),
-    solved: false
-  }).success(challenge => {
-    challenges.extraLanguageChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'Zero Stars',
+    name: 'ურეიტინგო გამოხმაურება',
     category: 'Validation Flaws',
-    description: 'Give a devastating zero-star feedback to the store.',
+    description: 'გააკეთე გამოხმაურება ვარსკვლავების მითითების გარეშე',
     difficulty: 1,
     hint: addHint('Before you invest time bypassing the API, you might want to play around with the UI a bit.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/validation.html#give-a-devastating-zero-star-feedback-to-the-store'),
@@ -378,48 +345,15 @@ function createChallenges () {
     challenges.zeroStarsChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Imaginary Challenge',
-    category: 'Cryptographic Issues',
-    description: 'Solve challenge #99. Unfortunately, this challenge does not exist.',
-    difficulty: 5,
-    hint: addHint('You need to trick the hacking progress persistence feature into thinking you solved challenge #99.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/crypto.html#solve-challenge-99'),
-    solved: false
-  }).success(challenge => {
-    challenges.continueCodeChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'Login Psiinon',
+    name: 'დალოგინდი როგორც Psiinon',
     category: 'Weak Security Mechanisms',
-    description: 'Log in with Psiinon\'s user account <i>without</i> previously changing his password, applying SQL Injection, or hacking his Google account.',
+    description: 'დალოგინდი Psiinon -ს ანგარიშზე SQL Injection -ის გამოყენებით.',
     difficulty: 3,
     hint: addHint('The security flaw behind this challenge is 100% Juice Shop\'s fault and 0% Google\'s.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#log-in-with-bjoerns-user-account'),
     solved: false
   }).success(challenge => {
     challenges.oauthUserPasswordChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'Login CISO',
-    category: 'Weak Security Mechanisms',
-    description: 'Exploit OAuth 2.0 to log in with the Chief Information Security Officer\'s user account.',
-    difficulty: 4,
-    hint: addHint('Don\'t try to beat Google\'s OAuth 2.0 service. Rather investigate implementation flaws on Juice Shop\'s end.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#exploit-oauth-20-to-log-in-with-the-cisos-user-account'),
-    solved: false
-  }).success(challenge => {
-    challenges.loginCisoChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'Login Support Team',
-    category: 'Weak Security Mechanisms',
-    description: 'Log in with the support team\'s original user credentials without applying SQL Injection or any other bypass.',
-    difficulty: 5,
-    hint: addHint('The underlying flaw of this challenge is a lot more human error than technical weakness.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#log-in-with-the-support-teams-original-user-credentials'),
-    solved: false
-  }).success(challenge => {
-    challenges.loginSupportChallenge = challenge
   })
   models.Challenge.create({
     name: 'Premium Paywall',
@@ -433,9 +367,9 @@ function createChallenges () {
     challenges.premiumPaywallChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Reset Jim\'s Password',
+    name: 'დაარესეტე Jim -ის პაროლი',
     category: 'Sensitive Data Exposure',
-    description: 'Reset Jim\'s password via the <a href="/#/forgot-password">Forgot Password</a> mechanism with <i>the original answer</i> to his security question.',
+    description: 'დაარესეტე James T. Kirk -ის პაროლი <a href="/#/forgot-password">Forgot Password</a>  უსაფრთხოების პაროლის გამოცნობის ხარჯზე. (გამოიყენე OSINT)',
     difficulty: 2,
     hint: addHint('It\'s hard for celebrities to pick a security question from a hard-coded list where the answer is not publicly exposed.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sensitive-data.html#reset-jims-password-via-the-forgot-password-mechanism'),
@@ -446,7 +380,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Reset Bender\'s Password',
     category: 'Sensitive Data Exposure',
-    description: 'Reset Bender\'s password via the <a href="/#/forgot-password">Forgot Password</a> mechanism with <i>the original answer</i> to his security question.',
+    description: 'დაარესეტე Bender -ის პაროლი (Bender from Futurama) via the <a href="/#/forgot-password">Forgot Password</a> უსაფრთხოების პაროლის გამოცნობის ხარჯზე. (გამოიყენე OSINT).',
     difficulty: 3,
     hint: addHint('Not as trivial as Jim\'s but still not too difficult with some "Futurama" background knowledge.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sensitive-data.html#reset-benders-password-via-the-forgot-password-mechanism'),
@@ -468,20 +402,9 @@ function createChallenges () {
   })
 */
   models.Challenge.create({
-    name: 'Find JWT Secret',
-    category: 'Weak Security Mechanism',
-    description: '<a href="/#/contact">Inform the shop</a> about a JWT issue. (Mention the exact secret used for the signature in the JWT in your comment)',
-    difficulty: 4,
-    hint: addHint('This might require you to grab a little bit deeper into the pentester\'s toolbox.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#inform-the-shop-about-a-jwt-issue'),
-    solved: false
-  }).success(challenge => {
-    challenges.jwtSecretChallenge = challenge
-  })
-  models.Challenge.create({
-    name: 'NoSQL Injection Tier 1',
+    name: 'NoSQL Injection 1',
     category: 'NoSQL Injection',
-    description: 'Let the server sleep for some time. (It has done more than enough hard work for you)',
+    description: 'NoSQL Injection -ის გამოყენებით სერვერი დააძინე 200 მილიწამით',
     hint: addHint('This challenge is essentially a stripped-down Denial of Service (DoS) attack.'),
     difficulty: 3,
     solved: false
@@ -489,9 +412,9 @@ function createChallenges () {
     challenges.noSqlCommandChallenge = challenge
   })
   models.Challenge.create({
-    name: 'NoSQL Injection Tier 2',
+    name: 'NoSQL Injection 2',
     category: 'NoSQL Injection',
-    description: 'Update multiple product reviews at the same time.',
+    description: 'NoSQL Injection -ის გამოყენებით განაახლე პროდუქტების review ერთდროულად (მინიშნება RESTful API) .',
     hint: addHint('Take a close look on how the equivalent of UPDATE-statements in MongoDB work.'),
     difficulty: 3,
     solved: false
