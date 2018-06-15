@@ -28,7 +28,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Error Handling',
     category: 'Information Leakage',
-    description: 'Provoke an error that is not very gracefully handled.',
+    description: 'გამოიწვიე შეცდომა სერვერზე',
     difficulty: 1,
     hint: addHint('Try to submit bad input to forms. Alternatively tamper with URL paths or parameters.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/leakage.html#provoke-an-error-that-is-not-very-gracefully-handled'),
