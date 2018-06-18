@@ -550,7 +550,7 @@ function createProducts () {
     let description = product.description || 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
     const reviews = product.reviews
     if (product.useForChristmasSpecialChallenge) {
-      description += ' ()'
+      description += ' (Seasonal special offer! Limited availability!)'
     } else if (product.useForProductTamperingChallenge) {
       description += ' <a href="https://www.owasp.org/index.php/ZAP" target="_blank">More...</a>'
     } else if (product.fileForRetrieveBlueprintChallenge) {
