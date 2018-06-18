@@ -213,9 +213,9 @@ function createChallenges () {
     challenges.forgottenDevBackupChallenge = challenge
   })
   models.Challenge.create({
-    name: 'გაყიდვების ფაილი',
+    name: 'კუპონების ფაილი',
     category: 'Forgotten Content',
-    description: 'განახორციელე გახიდვების ფაილზე წვდომა.',
+    description: 'განახორციელე კუპონების ფაილზე წვდომა.',
     difficulty: 2,
     hint: addHint('You need to trick a security mechanism into thinking that the file you want has a valid file type.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#access-a-salesmans-forgotten-backup-file'),
