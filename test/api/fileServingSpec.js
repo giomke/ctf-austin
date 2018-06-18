@@ -77,8 +77,8 @@ describe('/ftp', () => {
       .done(done)
   })
 
-  it('GET existing file /ftp/coupons_2013.md.bak will return a 403 error for invalid file type .bak', done => {
-    frisby.get(URL + '/ftp/coupons_2013.md.bak')
+  it('GET existing file /ftp/coupons.md.bak will return a 403 error for invalid file type .bak', done => {
+    frisby.get(URL + '/ftp/coupons.md.bak')
       .expect('status', 403)
       .done(done)
   })
@@ -117,21 +117,21 @@ describe('/ftp', () => {
   })
 
   it('GET the 2013 coupon code file by using Poison Null Byte attack with .pdf suffix', done => {
-    frisby.get(URL + '/ftp/coupons_2013.md.bak%00.pdf')
+    frisby.get(URL + '/ftp/coupons.md.bak%00.pdf')
       .expect('status', 200)
       .expect('bodyContains', 'n<MibgC7sn')
       .done(done)
   })
 
   it('GET the 2013 coupon code file by using an Poison Null Byte attack with .md suffix', done => {
-    frisby.get(URL + '/ftp/coupons_2013.md.bak%00.md')
+    frisby.get(URL + '/ftp/coupons.md.bak%00.md')
       .expect('status', 200)
       .expect('bodyContains', 'n<MibgC7sn')
       .done(done)
   })
 
   it('GET the 2013 coupon code file by appending md_debug parameter with value fulfilling filename validation', done => {
-    frisby.get(URL + '/ftp/coupons_2013.md.bak?md_debug=.pdf')
+    frisby.get(URL + '/ftp/coupons.md.bak?md_debug=.pdf')
       .expect('status', 200)
       .expect('bodyContains', 'n<MibgC7sn')
       .done(done)
