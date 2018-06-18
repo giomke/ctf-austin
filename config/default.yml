@@ -22,8 +22,8 @@ products:
     price: 0.01
     image: 'zap.png'
     useForProductTamperingChallenge: true
-  - name: 'Christmas Super-Surprise-Box (2014 Edition)'
-    description: 'Contains a random selection of stickers and three Unisex t-shirts (3XL) for an unbeatable price!'
+  - name: 'Christmas special offer of 2014'
+    description: 'სტიკერების ნაკრები'
     price: 29.99
     image: 'undefined.jpg'
     useForChristmasSpecialChallenge: true
