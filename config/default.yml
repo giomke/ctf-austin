@@ -32,8 +32,3 @@ products:
     price: 99.99
     image: '3d_keychain.jpg' # Exif metadata contains "OpenSCAD" as subtle hint...
     fileForRetrieveBlueprintChallenge: '3d_keychain.stl' # ...to blueprint file type
-  - name: 'Global OWASP WASPY Award 2017 Nomnation'
-    description: 'Your chance to nominate up to three quiet pillars of the OWASP community ends 2017-06-30! <a href="https://www.owasp.org/index.php/WASPY_Awards_2017">Nominate now!</a>'
-    price: 0.03
-    image: 'waspy.png'
-    deletedDate: '2017-07-01'
