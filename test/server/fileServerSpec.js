@@ -90,9 +90,9 @@ describe('fileServer', () => {
     expect(challenges.forgottenDevBackupChallenge.solved).to.equal(true)
   })
 
-  it('should solve "forgottenBackupChallenge" when requesting coupons_2013.md.bak with Poison Null Byte attack', () => {
+  it('should solve "forgottenBackupChallenge" when requesting coupons.md.bak with Poison Null Byte attack', () => {
     challenges.forgottenBackupChallenge = { solved: false, save: save }
-    req.params.file = 'coupons_2013.md.bak%00.md'
+    req.params.file = 'coupons.md.bak%00.md'
 
     servePublicFiles()(req, res, next)
 
@@ -100,9 +100,9 @@ describe('fileServer', () => {
     expect(challenges.forgottenBackupChallenge.solved).to.equal(true)
   })
 
-  it('should solve "forgottenBackupChallenge" when requesting coupons_2013.md.bak exploiting "md_debug" parameter bug with .md', () => {
+  it('should solve "forgottenBackupChallenge" when requesting coupons.md.bak exploiting "md_debug" parameter bug with .md', () => {
     challenges.forgottenBackupChallenge = { solved: false, save: save }
-    req.params.file = 'coupons_2013.md.bak'
+    req.params.file = 'coupons.md.bak'
     req.query.md_debug = '.md'
 
     servePublicFiles()(req, res, next)
@@ -111,9 +111,9 @@ describe('fileServer', () => {
     expect(challenges.forgottenBackupChallenge.solved).to.equal(true)
   })
 
-  it('should solve "forgottenBackupChallenge" when requesting coupons_2013.md.bak exploiting "md_debug" parameter bug with .pdf', () => {
+  it('should solve "forgottenBackupChallenge" when requesting coupons.md.bak exploiting "md_debug" parameter bug with .pdf', () => {
     challenges.forgottenBackupChallenge = { solved: false, save: save }
-    req.params.file = 'coupons_2013.md.bak'
+    req.params.file = 'coupons.md.bak'
     req.query.md_debug = '.pdf'
 
     servePublicFiles()(req, res, next)
