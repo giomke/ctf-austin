@@ -42,8 +42,8 @@ describe('/#/basket', () => {
     protractor.beforeEach.login({email: 'jim@' + config.get('application.domain'), password: 'ncc-1701'})
 
     describe('challenge "forgedCoupon"', () => {
-      it('should be able to access file /ftp/coupons_2013.md.bak with poison null byte attack', () => {
-        browser.driver.get(browser.baseUrl + '/ftp/coupons_2013.md.bak%2500.md')
+      it('should be able to access file /ftp/coupons.md.bak with poison null byte attack', () => {
+        browser.driver.get(browser.baseUrl + '/ftp/coupons.md.bak%2500.md')
       })
 
       it('should be possible to enter a coupon that gives an 80% discount', () => {
