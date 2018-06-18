@@ -1,9 +1,7 @@
 {
-  "name": "MozillaCTF",
-  "version": "1.0.0-SNAPSHOT",
-  "description": "An intentionally insecure JavaScript Web Application",
-  "homepage": "https://github.com/mozilla/security",
-  "author": "Firefox Operartions Security Team <foxsec@mozilla.com>",
+  "name": "CSBCTF",
+  "version": "1",
+  "description": "insecure Web Application",
   "contributors": [
   ],
   "private": true,
@@ -98,13 +96,6 @@
   },
   "peerDependencies": {
     "phantomjs-prebuilt": "~2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mozilla/ctf-secret.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mozilla/ctf-secret/issues"
   },
   "license": "MIT",
   "scripts": {
