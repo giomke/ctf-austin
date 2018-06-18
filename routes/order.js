@@ -19,7 +19,7 @@ exports = module.exports = function placeOrder () {
           const doc = new PDFDocument()
           const fileWriter = doc.pipe(fs.createWriteStream(path.join(__dirname, '../ftp/', pdfFile)))
 
-          doc.text('Juice-Shop - Order Confirmation')
+          doc.text('CSB - Order Confirmation')
           doc.moveDown()
           doc.moveDown()
           doc.moveDown()
