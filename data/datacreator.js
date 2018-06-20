@@ -422,9 +422,9 @@ function createChallenges () {
     challenges.noSqlInjectionChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Retrieve Blueprint',
+    name: '3D მოდელი',
     category: 'Forgotten Content',
-    description: 'Deprive the shop of earnings by downloading the blueprint for one of its products.',
+    description: 'მოიპოვე firefox -ის ემბლემის stl ფაილი',
     difficulty: 3,
     hint: addHint('Property \'fileForRetrieveBlueprintChallenge\' is missing in your Juice Shop config! Workaround: Try finding \'JuiceShop.stl\' somewhere. Be aware that with v5.0 this workaround will be removed!'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/forgotten-content.html#deprive-the-shop-of-earnings-by-downloading-the-blueprint-for-one-of-its-products'),
