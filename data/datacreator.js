@@ -325,7 +325,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Upload Size',
     category: 'Validation Flaws',
-    description: 'Upload a file larger than 100 kB.',
+    description: 'ატვირთე დაშვებულ 100 kB. -ზე მეტი და 200 kb -ზე ნაკლები ზომის PDF ფაილი',
     difficulty: 3,
     hint: addHint('You can attach a small file to the "File Complaint" form. Investigate how this upload actually works.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/validation.html#upload-a-file-larger-than-100-kb'),
@@ -336,7 +336,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'Upload Type',
     category: 'Validation Flaws',
-    description: 'Upload a file that has no .pdf extension.',
+    description: 'ატვირთე არა .pdf გაფართოების ფაილი.',
     difficulty: 3,
     hint: addHint('You can attach a PDF file to the "File Complaint" form. Investigate how this upload actually works.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/validation.html#upload-a-file-that-has-no-pdf-extension'),
