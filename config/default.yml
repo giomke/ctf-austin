@@ -27,8 +27,8 @@ products:
     price: 29.99
     image: 'undefined.jpg'
     useForChristmasSpecialChallenge: true
-  - name: 'Mozilla Austin CTF Logo (3D-printed)'
-    description: 'This rare item was designed and handcrafted in Sweden. This is why it is so incredibly expensive despite its complete lack of purpose.'
+  - name: 'Mozilla Logo (3D-printed)'
+    description: '3D-printed Mozilla Logo'
     price: 99.99
     image: '3d_keychain.jpg' # Exif metadata contains "OpenSCAD" as subtle hint...
     fileForRetrieveBlueprintChallenge: '3d_keychain.stl' # ...to blueprint file type
