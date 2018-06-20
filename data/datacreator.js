@@ -356,17 +356,6 @@ function createChallenges () {
     challenges.zeroStarsChallenge = challenge
   })
   models.Challenge.create({
-    name: 'დალოგინდი როგორც Psiinon',
-    category: 'Weak Security Mechanisms',
-    description: 'დალოგინდი Psiinon -ს ანგარიშზე SQL Injection -ის გამოყენებით.',
-    difficulty: 3,
-    hint: addHint('The security flaw behind this challenge is 100% Juice Shop\'s fault and 0% Google\'s.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/weak-security.html#log-in-with-bjoerns-user-account'),
-    solved: false
-  }).success(challenge => {
-    challenges.oauthUserPasswordChallenge = challenge
-  })
-  models.Challenge.create({
     name: 'Premium Paywall',
     category: 'Cryptographic Issues',
     description: '<i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><i class="fa fa-diamond"></i><!--R9U8AvGlBbjhHXHW422jxVL2hoLBr8wflIAQ8d/jlERpKnrNlMErs1JfgT9EK/kzTtdb1GPhuWAz3i2HhomhaFMxvg4na+tvTi+8DoQoeqZH1KADoM2NJ7UOKc14b54cdRTXiYV7yFUzbPjjPVOWZFSmDcG6z+jQIPZtJuJ/tQc=--> <a href="/redirect?to=https://blockchain.info/address/1AbKfgvw9psQ41NbLi8kufDQTezwG8DRZm" target="_blank" class="btn btn-danger btn-xs"><i class="fa fa-btc fa-sm"></i> Unlock Premium Challenge</a> to access exclusive content.',
