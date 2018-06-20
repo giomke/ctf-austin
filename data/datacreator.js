@@ -369,7 +369,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'დაარესეტე Jim -ის პაროლი',
     category: 'Sensitive Data Exposure',
-    description: 'დაარესეტე James T. Kirk -ის პაროლი <a href="/#/forgot-password">Forgot Password</a>  უსაფრთხოების პაროლის გამოცნობის ხარჯზე. (გამოიყენე OSINT)',
+    description: 'დაარესეტე James T. Kirk -ის პაროლი <a href="/#/forgot-password">Forgot Password</a>  უსაფრთხოების კითხვის გამოცნობის ხარჯზე. (გამოიყენე OSINT)',
     difficulty: 2,
     hint: addHint('It\'s hard for celebrities to pick a security question from a hard-coded list where the answer is not publicly exposed.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sensitive-data.html#reset-jims-password-via-the-forgot-password-mechanism'),
@@ -378,9 +378,9 @@ function createChallenges () {
     challenges.resetPasswordJimChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Reset Bender\'s Password',
+    name: 'დაარესეტე Bender -ის პაროლი',
     category: 'Sensitive Data Exposure',
-    description: 'დაარესეტე Bender -ის პაროლი (Bender from Futurama) via the <a href="/#/forgot-password">Forgot Password</a> უსაფრთხოების პაროლის გამოცნობის ხარჯზე. (გამოიყენე OSINT).',
+    description: 'დაარესეტე Bender -ის პაროლი (Bender from Futurama) <a href="/#/forgot-password">Forgot Password</a> უსაფრთხოების კითხვის გამოცნობის ხარჯზე. (გამოიყენე OSINT).',
     difficulty: 3,
     hint: addHint('Not as trivial as Jim\'s but still not too difficult with some "Futurama" background knowledge.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sensitive-data.html#reset-benders-password-via-the-forgot-password-mechanism'),
