@@ -31,4 +31,4 @@ products:
     description: '3D-printed Mozilla Logo'
     price: 99.99
     image: '3d_logo.jpg' # Exif metadata contains "OpenSCAD" as subtle hint...
-    fileForRetrieveBlueprintChallenge: '3d_keychain.stl' # ...to blueprint file type
+    fileForRetrieveBlueprintChallenge: '3d_logo.stl' # ...to blueprint file type
