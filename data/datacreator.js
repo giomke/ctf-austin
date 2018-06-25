@@ -388,20 +388,6 @@ function createChallenges () {
   }).success(challenge => {
     challenges.resetPasswordBenderChallenge = challenge
   })
-/*
-  models.Challenge.create({
-    name: 'Reset Bjoern\'s Password',
-    category: 'Sensitive Data Exposure',
-    description: 'Reset Bjoern\'s password via the <a href="/#/forgot-password">Forgot Password</a> mechanism with <i>the original answer</i> to his security question.',
-    difficulty: 4,
-    hint: addHint('Nothing a little bit of Facebook stalking couldn\'t reveal. Might involve a historical twist.'),
-    hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sensitive-data.html#reset-bjoerns-password-via-the-forgot-password-mechanism'),
-    solved: false
-  }).success(challenge => {
-    challenges.resetPasswordBjoernChallenge = challenge
-  })
-*/
-
   models.Challenge.create({
     name: 'NoSQL Injection Tier 1',
     category: 'NoSQL Injection',
@@ -453,9 +439,9 @@ function createChallenges () {
     challenges.typosquattingNpmChallenge = challenge
   })
   models.Challenge.create({
-    name: 'Typosquatting Tier 2',
+    name: 'Typosquatting 2',
     category: 'Vulnerable Component',
-    description: '<a href="/#/contact">Inform the shop</a> about a more literal instance of <i>typosquatting</i> it fell for. (Mention the exact name of the culprit)',
+    description: '<a href="/#/contact">შეატყობინე მაღაზიას</a> ფრონტში გამოყენებული <i>typosquatting</i> ხრიკის შესახებ, რომლის მსხვერპლიც არის. (მიშერე ყალბი პაკეტის სახელი)',
     difficulty: 4,
     hint: addHint('This challenge has nothing to do with URLs or domains. It literally exploits a potentially common typo.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/vulnerable-components.html#inform-the-shop-about-a-more-literal-instance-of-typosquatting-it-fell-for'),
