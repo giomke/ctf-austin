@@ -442,9 +442,9 @@ function createChallenges () {
     }
   })
   models.Challenge.create({
-    name: 'Typosquatting Tier 1',
+    name: 'Typosquatting 1',
     category: 'Vulnerable Component',
-    description: '<a href="/#/contact">Inform the shop</a> about a <i>typosquatting</i> trick it has become victim of. (Mention the exact name of the culprit)',
+    description: '<a href="/#/contact">შეატყობინე მაღაზიას</a> <i>typosquatting</i> ხრიკის შესახებ, რომლის მსხვერპლიც არის. (მიშერე ყალბი პაკეტის სახელი)',
     difficulty: 3,
     hint: addHint('This challenge has nothing to do with URLs or domains. Investigate the forgotten developer\'s backup file instead.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/vulnerable-components.html#inform-the-shop-about-a-typosquatting-trick-it-has-become-victim-of'),
