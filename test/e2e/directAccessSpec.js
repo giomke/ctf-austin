@@ -11,7 +11,7 @@ for (const product of config.get('products')) {
 describe('/', () => {
   describe('challenge "easterEgg2"', () => {
     it('should be able to access "secret" url for easter egg', () => {
-      browser.driver.get(browser.baseUrl + '/the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg')
+      browser.driver.get(browser.baseUrl + '/va/ji/ga/ro')
     })
 
     protractor.expect.challengeSolved({challenge: 'Easter Egg Tier 2'})
