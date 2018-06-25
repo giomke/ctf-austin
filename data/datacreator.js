@@ -401,10 +401,11 @@ function createChallenges () {
     challenges.resetPasswordBjoernChallenge = challenge
   })
 */
+
   models.Challenge.create({
-    name: 'NoSQL Injection 1',
+    name: 'NoSQL Injection Tier 1',
     category: 'NoSQL Injection',
-    description: 'NoSQL Injection -ის გამოყენებით სერვერი დააძინე 200 მილიწამით',
+    description: 'Let the server sleep for some time. (It has done more than enough hard work for you)',
     hint: addHint('This challenge is essentially a stripped-down Denial of Service (DoS) attack.'),
     difficulty: 3,
     solved: false
@@ -412,9 +413,9 @@ function createChallenges () {
     challenges.noSqlCommandChallenge = challenge
   })
   models.Challenge.create({
-    name: 'NoSQL Injection 2',
+    name: 'NoSQL Injection Tier 2',
     category: 'NoSQL Injection',
-    description: 'NoSQL Injection -ის გამოყენებით განაახლე პროდუქტების review ერთდროულად (მინიშნება RESTful API) .',
+    description: 'Update multiple product reviews at the same time.',
     hint: addHint('Take a close look on how the equivalent of UPDATE-statements in MongoDB work.'),
     difficulty: 3,
     solved: false
