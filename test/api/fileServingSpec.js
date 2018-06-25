@@ -251,7 +251,7 @@ describe('/encryptionkeys', () => {
 
 describe('Hidden URL', () => {
   it('GET the second easter egg by visiting the Base64>ROT13-decrypted URL', done => {
-    frisby.get(URL + '/the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg')
+    frisby.get(URL + '/va/ji/ga/ro')
       .expect('status', 200)
       .expect('header', 'content-type', /text\/html/)
       .expect('bodyContains', '<title>Welcome to Planet Orangeuze</title>')
