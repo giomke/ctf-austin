@@ -192,7 +192,7 @@ app.get('/redirect', redirect())
 /* File Upload */
 app.post('/file-upload', upload.single('file'), fileUpload())
 /* File Serving */
-app.get('/the/devs/are/so/funny/they/hid/an/easter/egg/within/the/easter/egg', easterEgg())
+app.get('/va/ji/ga/ro', easterEgg())
 app.get('/this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us', premiumReward())
 app.use(angular())
 /* Error Handling */
