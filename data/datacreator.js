@@ -127,7 +127,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'User Credentials',
     category: 'SQL Injection',
-    description: 'SQL Injection -იით ნახე მომხმარებლების ცხრილი',
+    description: 'SQL Injection -ით ნახე მომხმარებლების ცხრილი',
     difficulty: 3,
     hint: addHint('Craft a UNION SELECT attack string against a page where you can influence the data being displayed.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/sqli.html#retrieve-a-list-of-all-user-credentials-via-sql-injection'),
@@ -149,7 +149,7 @@ function createChallenges () {
   models.Challenge.create({
     name: 'მომხმარებელთა გამოხმაურება (Feedback)',
     category: 'Privilege Escalation',
-    description: 'ადმინის პანელიდან წაშალე შველა ხუთ ვარსკვლავიანი გამოხმაურება(Feedback)',
+    description: 'ადმინის პანელიდან წაშალე ყველა ხუთ ვარსკვლავიანი გამოხმაურება(Feedback)',
     difficulty: 1,
     hint: addHint('Once you found admin section of the application, this challenge is almost trivial.'),
     hintUrl: addHint('https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/privilege-escalation.html#get-rid-of-all-5-star-customer-feedback'),
@@ -378,9 +378,9 @@ function createChallenges () {
     challenges.resetPasswordBenderChallenge = challenge
   })
   models.Challenge.create({
-    name: 'NoSQL Injection Tier 2',
+    name: 'NoSQL Injection',
     category: 'NoSQL Injection',
-    description: 'Update multiple product reviews at the same time.',
+    description: 'განაახლე პროდუქტების მიმოხილვა(reviews) ერთდროულად',
     hint: addHint('Take a close look on how the equivalent of UPDATE-statements in MongoDB work.'),
     difficulty: 3,
     solved: false
